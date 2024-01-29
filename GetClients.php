@@ -75,6 +75,8 @@ $conn->close();
         ?>
     </tbody>
 </table>
-
+<div>
+        <a href="index.php" target="_blank" class="addClientBtn">Add Client</a>
+    </div>
 </body>
 </html>
