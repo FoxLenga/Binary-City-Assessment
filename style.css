@@ -1,5 +1,5 @@
 
-.cname, .client_code {
+input[type=text], input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -20,12 +20,59 @@
     cursor: pointer;
   }
   
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
   form {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
   }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+  /* Get Client Page */
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.addClientBtn , .addContactBtn {
+    background-color: #10e39d;
+    color: rgb(238, 236, 236);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
