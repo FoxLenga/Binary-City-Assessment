@@ -57,8 +57,8 @@ $conn->close();
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                // echo "<td>" . $row["name"] . "</td>";
-                echo "<td>" . $row["surname"] . " " . $row["name"] . "</td>";
+                echo "<td>" . $row["name"] . "</td>";
+                echo "<td>" . $row["surname"] . "</td>";
                 echo "<td>" . $row["email address"] . "</td>";
                 echo "<td>" . $row["link clients"] . "</td>";
                 echo "</tr>";
