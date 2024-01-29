@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch clients from the database ordered by name ascending
-$sql = "SELECT * FROM clients ORDER BY name ASC";
+$sql = "SELECT * FROM contacts ORDER BY name ASC";
 $result = $conn->query($sql);
 
 // Close the database connection
@@ -45,7 +45,6 @@ $conn->close();
 <table>
     <thead>
         <tr>
-            <th>ID</th>
             <th>Name</th>
             <th>Surname</th>
             <th>Email Address</th>
@@ -58,18 +57,21 @@ $conn->close();
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row["name"] . "</td>";
-                echo "<td>" . $row["surname"] . "</td>";
+                // echo "<td>" . $row["name"] . "</td>";
+                echo "<td>" . $row["surname"] . " " . $row["name"] . "</td>";
                 echo "<td>" . $row["email address"] . "</td>";
                 echo "<td>" . $row["link clients"] . "</td>";
                 echo "</tr>";
             }
         } else {
-            echo "<tr><td colspan='4'>No clients found</td></tr>";
+            echo "<tr><td colspan='4'>No Contact (s) found</td></tr>";
         }
         ?>
     </tbody>
 </table>
 
+<div>
+        <a href="AddContact.php" target="_blank" class="addContactBtn">Add Contact</a>
+    </div>
 </body>
 </html>
